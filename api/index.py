@@ -6,7 +6,7 @@ app = Flask(__name__)
 def search():  # put application's code here
     keywords = request.args.get('q')
     max_results = int(request.args.get('max_results') or "3")
-    results = ddg(keywords, region='wt-wt', max_results=max_results,time='m', safesearch='Off')
+    results = ddg(keywords, max_results=max_results,time='m', safesearch='Off')
     return results
 
 
