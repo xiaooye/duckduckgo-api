@@ -7,7 +7,7 @@ ddgs = DDGS()
 def search():  # put application's code here
     keywords = request.args.get('q')
     max_results = int(request.args.get('max_results') or "3")
-    results = ddgs.text(keywords, region='wt-wt', max_results=max_results,timelimit='m', safesearch='Off')
+    results = ddgs.text(keywords, region='wt-wt', timelimit='m', safesearch='Off')
     return results
 
 
